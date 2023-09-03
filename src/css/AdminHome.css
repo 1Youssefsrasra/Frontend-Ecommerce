@@ -1,0 +1,147 @@
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/****************************/
+.stats{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background-color: #1d283c;
+    padding: 20px;
+    border-radius: 15px;
+    gap: 20px;
+
+}
+
+.chart {
+  border-radius: 50%;
+  width: 250px;
+  height: 0;
+  padding-top: 250px;
+  float: left;
+  padding-right: 20px;
+}
+
+.key {
+  width: 250px;
+  float: right;
+  list-style: none;
+  display: table;
+  border-collapse: separate;
+}
+  .key li {
+    display: table-row;
+  }
+.key li strong, .key li span{
+      display: table-cell;
+      border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    }
+  
+
+
+.percent {
+  color: white;
+  padding: 10px 2px;
+  text-shadow: 0 0 1px black;
+  text-align: center;
+}
+.choice {
+  padding-left: 10px;
+  color: #fff;
+}
+
+.red {
+  background: rgb(13, 65, 179);
+}
+.green{
+    background-color: rgb(13, 63, 97);
+}
+.orange {
+  background: rgb(23, 181, 209);
+}
+
+* {
+  box-sizing: border-box;
+}
+/**********************/
+
+.simple-bar-chart{
+  --line-count: 10;
+  --line-color: currentcolor;
+  --line-opacity: 0.25;
+  --item-gap: 2%;
+  --item-default-color: #757575;
+  
+  height: 15rem;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2%;
+  align-items: end;
+  padding-inline: 2%;
+  padding-block: 1.5rem;
+  position: relative;
+  isolation: isolate;
+  width: 70%;
+  background-color: #1d283c;
+  border-radius: 15px;
+  
+}
+
+.simple-bar-chart::after{
+  content: "";
+  position: absolute;
+  inset: 1.5rem 0;
+  z-index: -1;
+  --line-width: 1px;
+  --line-spacing: calc(100% / var(--line-count));
+  background-image: repeating-linear-gradient(to top, transparent 0 calc(var(--line-spacing) - var(--line-width)), var(--line-color) 0 var(--line-spacing));
+  box-shadow: 0 var(--line-width) 0 var(--line-color);
+  opacity: var(--line-opacity);
+}
+.simple-bar-chart > .item{
+  height: calc(1% * var(--val));
+  background-color: var(--clr, var(--item-default-color));
+  position: relative;
+  animation: item-height 1s ease forwards
+}
+@keyframes item-height { from { height: 0 } }
+
+.simple-bar-chart > .item > * { position: absolute; text-align: center }
+.simple-bar-chart > .item > .label { inset: 100% 0 auto 0 }
+.simple-bar-chart > .item > .value { inset: auto 0 100% 0 }
+
+/*********************/
+.stats-section{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/******************/
+.best-clients, .best-product{
+  background-color: #1d283c;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 15px;
+  width: fit-content;
+}
+.best-clients h2, .best-product h2, .best-product h3{
+  color: #fff;
+  font-weight: 600;
+}
+.best-clients .key{
+  width: fit-content;
+}
+/*******************************/
+
+
+
+
+
+

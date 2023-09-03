@@ -1,0 +1,40 @@
+/* home */
+.home{
+  padding: 0;
+  width: 100%;
+}
+.home .slide{
+  padding:3rem;
+  display: flex;
+  min-height: 82vh;
+  display: none;
+
+}
+.home .slide.active {
+  display: flex;
+}
+.home .slide.first{
+  background: url(/public/img01.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home .slide.second{
+  background: url(/public/img02.jpg) no-repeat;
+  background-size: cover;
+  background-position:center;
+}
+.home .slide.third{
+  background: url(/public/img03.jpg) no-repeat;
+  background-size: cover;
+  background-position:center;
+}
+.slick-next{
+  right: 0px;
+  opacity: 0%;
+  cursor:default;
+}
+
+
+
+
+
